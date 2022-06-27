@@ -47,7 +47,7 @@ class WebcamController extends Controller
         $fileName = time().'.png';
         $file = $folderPath . $fileName;
         Storage::put($file, $image_base64);
-        $data->img = $fileName;
+        $data->pp_image = $fileName;
         $data->save();        
         return view('admin.disable.add');
     }
